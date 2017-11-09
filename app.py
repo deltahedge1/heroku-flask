@@ -11,6 +11,9 @@ def index():
 @app.route("/upload", methods=["GET","POST"])
 def upload():
 
+    filename = ""
+    r = []
+    
     for file in request.files.getlist("file"):
         filename = file.filename
         #destination = "/".join([target, filename])  
