@@ -5,6 +5,8 @@ from nltk import word_tokenize
 a = TextBlob("Ishtiaq is my name")
 b = list(a.words)
 
+c = word_tokenize("Ishtiaq is nice"
+                  
 app = Flask(__name__)
 
 @app.route("/")
