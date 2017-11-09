@@ -1,19 +1,26 @@
-from flask import Flask, render_template
-from textblob import TextBlob
-from nltk import word_tokenize
+from flask import Flask, render_template, request
+from nltk import sent_tokenize, word_tokenize
+import docx2txt
 
-f = open("test1.txt","r")
-
-sentences = f.readlines()
-
-list1 = [word for sentence in sentences for word in word_tokenize(sentence)]
-
-                  
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-           return render_template("index.html", r = list1)
+    return render_template("index.html")
 
-if __name__ == "__main__":
-           app.run()
+@app.route("/upload", methods=["GET","POST"])
+def upload():
+
+    for file in request.files.getlist("file"):
+        filename = file.filename
+        #destination = "/".join([target, filename])  
+    
+    f = open(filename, "r")
+    r = [word for sentence in f.readlines() for word in sentence]
+    
+    f.close()
+        
+    return render_template("completed.html", r = r)
+
+if __name__ == '__main__':
+   app.run(debug = True)
