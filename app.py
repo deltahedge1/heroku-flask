@@ -1,4 +1,8 @@
 from flask import Flask
+from textblob import TextBlob
+
+a = TextBlob("This is a sentence")
+b = list(TextBlob.words)
 
 app = Flask(__name__)
 
