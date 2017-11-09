@@ -1,6 +1,6 @@
 from flask import Flask
 from textblob import TextBlob
-import nltk
+from nltk import word_tokenize
 
 a = TextBlob("Ishtiaq is my name")
 b = list(a.words)
