@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-           return "hello" + str(b[0])
+           return "hello" + str(c[0])
 
 if __name__ == "__main__":
            app.run()
