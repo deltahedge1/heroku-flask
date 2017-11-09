@@ -2,7 +2,7 @@ from flask import Flask
 from textblob import TextBlob
 
 a = TextBlob("This is a sentence")
-b = list(TextBlob.words)
+b = list(a.words)
 
 app = Flask(__name__)
 
