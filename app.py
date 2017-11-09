@@ -16,7 +16,7 @@ def upload():
         #destination = "/".join([target, filename])  
     
     f = open(filename, "r")
-    r = [word for sentence in f.readlines() for word in sentence]
+    r = [word for sentence in f.readlines() for word in word_tokenize(sentence)]
     
     f.close()
         
