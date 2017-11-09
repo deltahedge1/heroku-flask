@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from textblob import TextBlob
 from nltk import word_tokenize
 
@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-           return "hello" + str(c[0])
+           return render_template("index.html", r = c)
 
 if __name__ == "__main__":
            app.run()
