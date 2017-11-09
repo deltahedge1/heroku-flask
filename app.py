@@ -1,5 +1,6 @@
 from flask import Flask
 from textblob import TextBlob
+import nltk
 
 a = TextBlob("Ishtiaq is my name")
 b = list(a.words)
