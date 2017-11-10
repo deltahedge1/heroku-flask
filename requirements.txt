@@ -4,3 +4,4 @@ pandas
 textblob
 docx2txt
 nltk
+requests
