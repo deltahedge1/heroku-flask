@@ -6,6 +6,8 @@
         <meta charset="utf-8">
         <title>Audit Opinion Analyser</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
 
         <style media="screen">
         .jumbotron {
@@ -30,18 +32,21 @@
     <body>
 
         <div class="jumbotron">
-                  <h1 class="display-3 text-center">Audit Opinion Analyser</h1>
+                  <h1 class="display-3 text-center"><i class="mdi mdi-buffer"></i> Audit Opinion Analyser</h1>
                   <p class="lead text-center">This is a website that can help analyse your audit opinion and help and streamline the review process</p>
                   <hr class="my-4">
                   </p>
+                  <br>
         </div>
 
         <div class="text-center">
             <h1>Please Upload Key Audit Matters</h1>
+            <br>
+            <br>
             <form id="upload-form" action="{{ url_for('upload')}}" method="POST" enctype="multipart/form-data">
-                <input type="file" name="file" accept=".txt">
-                <input type="submit" name="send" value="send">
-            </form>    
+                <input type="file" name="file" accept=".txt, .doc, .docx">
+                <input type="submit" name="send" value="Analyse">
+            </form>
         </div>
 
     </body>
