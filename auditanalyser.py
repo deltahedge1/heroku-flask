@@ -8,7 +8,10 @@ Created on Mon Oct 16 15:28:14 2017
 import re
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
-from stemming.porter2 import stem
+#from stemming.porter2 import stem
+from nltk.stem import PorterStemmer
+
+stem = PorterStemmer().stem
 
 stop_words = set(stopwords.words("english"))
 
