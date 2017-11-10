@@ -2,5 +2,4 @@ flask
 gunicorn
 textblob
 docx2txt
-porter2stemmer
 pandas
