@@ -2,5 +2,6 @@ flask
 gunicorn
 textblob
 docx2txt
-pandas
 porter2stemmer
+pandas
+nltk
