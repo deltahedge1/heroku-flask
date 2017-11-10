@@ -13,7 +13,7 @@ from nltk.stem import PorterStemmer
 
 stem = PorterStemmer().stem
 
-stop_words = set(stopwords.words("english"))
+#stop_words = set(stopwords.words("english"))
 
 class auditAnalyser(object):
     
