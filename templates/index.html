@@ -4,13 +4,45 @@
 <title>Upload</title>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Audit Opinion Analyser</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+        <style media="screen">
+        .jumbotron {
+                background-color: #4633ff!important;
+                }
+
+        .jumbotron h1{
+            color: #fdfefe;
+        }
+
+        .jumbotron p{
+            color: #fdfefe;
+        }
+
+        .jumbotron hr{
+            border-color: #fdfefe;
+        }
+
+        </style>
     </head>
+
     <body>
-        <h1>File Uploader</h1>
-        <form id="upload-form" action="{{ url_for('upload')}}" method="POST" enctype="multipart/form-data">
-            <input type="file" name="file" accept=".txt">
-            <input type="submit" name="send" value="send">
-        </form>
+
+        <div class="jumbotron">
+                  <h1 class="display-3 text-center">Audit Opinion Analyser</h1>
+                  <p class="lead text-center">This is a website that can help analyse your audit opinion and help and streamline the review process</p>
+                  <hr class="my-4">
+                  </p>
+        </div>
+
+        <div class="text-center">
+            <h1>Please Upload Key Audit Matters</h1>
+            <form id="upload-form" action="{{ url_for('upload')}}" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".txt">
+                <input type="submit" name="send" value="send">
+            </form>    
+        </div>
+
     </body>
 </html>
