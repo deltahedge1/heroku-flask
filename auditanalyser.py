@@ -9,11 +9,8 @@ import re
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
 from stemming.porter2 import stem
-from nltk.stem import WordNetLemmatizer
 
 stop_words = set(stopwords.words("english"))
-#checkwords = open('C:/Users/ihassan1/AAA/ANZ Breech Local/searchwords.txt').read().splitlines()
-lemmatizer = WordNetLemmatizer()
 
 class auditAnalyser(object):
     
