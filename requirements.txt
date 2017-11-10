@@ -1,7 +1,0 @@
-flask
-gunicorn
-textblob
-docx2txt
-pandas
-nltk
-requests
