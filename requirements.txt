@@ -2,3 +2,5 @@ flask
 gunicorn
 pandas
 textblob
+docx2txt
+nltk
